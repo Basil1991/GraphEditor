@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToolBox>
+  <!--模板必备不能删除-->
+  <ControlType name="模板列表">
+    <control key="Start" name="流程开始" ImageSource="\Resource\begin.ico"  ScriptPath="LuaStart.txt">
+      <Propertys>
+        <Property name="方法名称"  field="FunName" value=""></Property>
+        <Property name="方法参数"  field="FunParam" value=""></Property>
+      </Propertys>
+    </control>
+    <control key="End" name="流程结束" ImageSource="\Resource\end.ico"  ScriptPath="LuaEnd.txt">
+    </control>
+  </ControlType>
+  <!--判断列表-->
+  <ControlType name="判断列表">
+    <control type="check" key="checkTask" name="判断任务是否存在" ImageSource="\Resource\Shap\lingxin.png" ScriptPath="checkTask.txt">
+      <Propertys>
+        <Property name="任务ID" field="nTask" value=""></Property>
+      </Propertys>
+    </control>
+
+    <control type="check" key="checkNPC" name="判断NPC" ImageSource="\Resource\Shap\lingxin.png" ScriptPath="checkNpc.txt">
+      <Propertys>
+        <Property name="NPCID" field="nNPCID" value=""></Property>
+      </Propertys>
+    </control>
+
+    <control type="check" key="checkBag" name="检查背包空间" ImageSource="\Resource\Shap\lingxin.png" ScriptPath="checkEmptyBag.txt">
+      <Propertys>
+        <Property name="空位数量" field="count" value="1"></Property>
+      </Propertys>
+    </control>
+  </ControlType>
+  <!--玩家取值列表-->
+  <ControlType name="演示">
+    <control type="checkEnd" key="ifEnd" name="判断结束" ImageSource="\Resource\Shap\tuoyuan.png"  ScriptPath="ifEnd.txt"></control>
+    <control key="DialogText" name="对话文本" ImageSource="\Resource\Shap\tuoyuan.png" ScriptPath="DialogText.txt">
+      <Propertys>
+        <Property name="说话内容" field="text" value=""></Property>
+      </Propertys>
+    </control>
+
+    <control key="addSomething" name="获得物品" ImageSource="\Resource\Shap\tuoyuan.png" ScriptPath="AddSomething.txt">
+      <Propertys>
+        <Property name="物品ID" field="id" value=""></Property>
+      </Propertys>
+    </control>
+  </ControlType>
+</ToolBox>

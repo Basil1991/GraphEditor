@@ -1,0 +1,1 @@
+Get_SysDynaGlobalDataStr1(<%nSysDyGlobId%>)

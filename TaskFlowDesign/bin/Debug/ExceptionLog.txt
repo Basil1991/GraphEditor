@@ -1,0 +1,300 @@
+Datetime:2016/7/26 星期二 上午 11:37:27
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:37:28
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:37:29
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:38:58
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:38:59
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:39:07
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 50
+   在 System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)
+   在 System.Windows.Controls.MenuItem.InvokeClickAfterRender(Object arg)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+
+Datetime:2016/7/26 星期二 上午 11:39:07
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:43:50
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:43:51
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/26 星期二 上午 11:43:51
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 51
+
+Datetime:2016/7/26 星期二 上午 11:43:52
+Message:找不到else.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 80
+
+Datetime:2016/7/27 星期三 下午 3:02:50
+Message:找不到GetEmptyBag.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 83
+
+Datetime:2016/7/27 星期三 下午 3:02:51
+Message:找不到GetEmptyBag.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 83
+
+Datetime:2016/7/27 星期三 下午 3:02:52
+Message:找不到GetEmptyBag.txt
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.getScript(DesignerItem item) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 93
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 36
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(DesignerItem source, UIElementCollection es) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 83
+
+Datetime:2016/7/28 星期四 上午 10:17:17
+Message:未将对象引用设置到对象的实例。
+Stack:   在 DiagramDesigner.DesignerCanvas.Open_Executed(Object sender, ExecutedRoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\DiagramDesigner\DesignerCanvas.Commands.cs:行号 92
+   在 System.Windows.Input.CommandBinding.OnExecuted(Object sender, ExecutedRoutedEventArgs e)
+   在 System.Windows.Input.CommandManager.ExecuteCommandBinding(Object sender, ExecutedRoutedEventArgs e, CommandBinding commandBinding)
+   在 System.Windows.Input.CommandManager.FindCommandBinding(CommandBindingCollection commandBindings, Object sender, RoutedEventArgs e, ICommand command, Boolean execute)
+   在 System.Windows.Input.CommandManager.FindCommandBinding(Object sender, RoutedEventArgs e, ICommand command, Boolean execute)
+   在 System.Windows.Input.CommandManager.OnExecuted(Object sender, ExecutedRoutedEventArgs e)
+   在 System.Windows.UIElement.OnExecutedThunk(Object sender, ExecutedRoutedEventArgs e)
+   在 System.Windows.Input.ExecutedRoutedEventArgs.InvokeEventHandler(Delegate genericHandler, Object target)
+   在 System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   在 System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   在 System.Windows.Input.RoutedCommand.ExecuteImpl(Object parameter, IInputElement target, Boolean userInitiated)
+   在 System.Windows.Input.RoutedCommand.ExecuteCore(Object parameter, IInputElement target, Boolean userInitiated)
+   在 System.Windows.Input.CommandManager.TranslateInput(IInputElement targetElement, InputEventArgs inputEventArgs)
+   在 System.Windows.UIElement.OnKeyDownThunk(Object sender, KeyEventArgs e)
+   在 System.Windows.Input.KeyEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   在 System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   在 System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   在 System.Windows.Input.InputManager.ProcessStagingArea()
+   在 System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   在 System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)
+   在 System.Windows.Interop.HwndKeyboardInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawKeyboardActions actions, Int32 scanCode, Boolean isExtendedKey, Boolean isSystemKey, Int32 virtualKey)
+   在 System.Windows.Interop.HwndKeyboardInputProvider.ProcessKeyAction(MSG& msg, Boolean& handled)
+   在 System.Windows.Interop.HwndSource.CriticalTranslateAccelerator(MSG& msg, ModifierKeys modifiers)
+   在 System.Windows.Interop.HwndSource.OnPreprocessMessage(Object param)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+
+Datetime:2016/7/28 星期四 下午 2:06:25
+Message:正在分析“(\s)*else(\s))”－ ) 过多。
+Stack:   在 System.Text.RegularExpressions.RegexParser.ScanRegex()
+   在 System.Text.RegularExpressions.RegexParser.Parse(String re, RegexOptions op)
+   在 System.Text.RegularExpressions.Regex..ctor(String pattern, RegexOptions options, TimeSpan matchTimeout, Boolean useCache)
+   在 System.Text.RegularExpressions.Regex.Match(String input, String pattern)
+   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 32
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 2:06:49
+Message:正在分析“(\s)*else(\s))”－ ) 过多。
+Stack:   在 System.Text.RegularExpressions.RegexParser.ScanRegex()
+   在 System.Text.RegularExpressions.RegexParser.Parse(String re, RegexOptions op)
+   在 System.Text.RegularExpressions.Regex..ctor(String pattern, RegexOptions options, TimeSpan matchTimeout, Boolean useCache)
+   在 System.Text.RegularExpressions.Regex.Match(String input, String pattern)
+   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 32
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 2:10:02
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 23
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 41
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 42
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 2:37:46
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 87
+
+Datetime:2016/7/28 星期四 下午 2:37:47
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 87
+
+Datetime:2016/7/28 星期四 下午 2:37:48
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 87
+
+Datetime:2016/7/28 星期四 下午 2:37:53
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 2:47:03
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 87
+
+Datetime:2016/7/28 星期四 下午 2:47:04
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 87
+
+Datetime:2016/7/28 星期四 下午 2:47:05
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.getPreviewResult(Object obj) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\MainWindow.xaml.cs:行号 87
+
+Datetime:2016/7/28 星期四 下午 2:47:08
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 2:49:19
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getSpaceCount(String previousContent) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 26
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 11
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 43
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 3:34:21
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getResult(Int32 spaceCount, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 62
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 23
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 39
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 3:34:39
+Message:索引超出了数组界限。
+Stack:   在 TaskFlowDesign.Utils.LuaUtil.getResult(Int32 spaceCount, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 62
+   在 TaskFlowDesign.Utils.LuaUtil.Decorate(String previousContent, String content) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\LuaUtil.cs:行号 23
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 39
+   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 40
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 5:22:46
+Message:未将对象引用设置到对象的实例。
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 30
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 5:22:53
+Message:未将对象引用设置到对象的实例。
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 30
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 5:23:16
+Message:未将对象引用设置到对象的实例。
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 30
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+
+Datetime:2016/7/28 星期四 下午 5:26:19
+Message:未将对象引用设置到对象的实例。
+Stack:   在 TaskFlowDesign.Utils.ScriptGenerateUtil.GetNodeResult(String previousContent, DesignerItem source, UIElementCollection es, LanguageType languageType) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Utils\ScriptGenerateUtil.cs:行号 30
+   在 TaskFlowDesign.MainWindow.mScriptGenerate_Click(Object sender, RoutedEventArgs e) 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\Commond\MainWindow.Commond.cs:行号 56
+

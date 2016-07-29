@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Controls>
+  <Control>
+    <Type>NPC</Type>
+    <Name>NPC</Name>
+    <Shape>Rectangle</Shape>
+    <Properties>
+      <Property>
+        <Value>NPCId</Value>
+      </Property>
+    </Properties>
+    <Script>Met a NPC("{{NPCID}}")</Script>
+    <Desc>(触发NPC事件)</Desc>
+  </Control>
+
+  <Control>
+    <Type>Check</Type>
+    <Name>判断背包空间</Name>
+    <Shape>Prismatic</Shape>
+    <Properties>
+      <Property>
+        <Value>Count</Value>
+      </Property>
+    </Properties>
+    <Script>if {{Count}}>GetBagRemainCount() then</Script>
+    <Desc>(这里是放说明字段)</Desc>
+  </Control>
+
+  <Control>
+    <Type>Text</Type>
+    <Name>文本提示</Name>
+    <Shape>Ellipse</Shape>
+    <Properties>
+      <Property>
+        <Value>Content</Value>
+      </Property>
+    </Properties>
+    <Script>Print "{{Content}}"</Script>
+    <Desc>(这里是放说明字段)</Desc>
+  </Control>
+</Controls>

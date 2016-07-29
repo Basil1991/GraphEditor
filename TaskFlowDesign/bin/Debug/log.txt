@@ -1,0 +1,21 @@
+Datetime:2016/7/25 星期一 上午 11:02:04
+Message:321
+Stack:   在 TaskFlowDesign.App..ctor() 位置 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\App.xaml.cs:行号 20
+   在 TaskFlowDesign.App.Main()
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+Datetime:2016/7/25 星期一 上午 11:02:04
+Message:123
+Stack:
+Datetime:2016/7/25 星期一 上午 11:02:04
+Message:456
+Stack:
+
+
+

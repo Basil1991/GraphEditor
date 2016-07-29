@@ -1,0 +1,31 @@
+﻿<Application x:Class="TaskFlowDesign.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TaskFlowDesign"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <!--Icon-->
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+                <!--DiagramDesigner-->
+                <ResourceDictionary Source="Resources/DiagramDesigner/Resources/ApplicationToolbar.xaml"/>
+                <ResourceDictionary Source="Resources/DiagramDesigner/Resources/DesignerItem.xaml"/>
+                <ResourceDictionary Source="Resources/DiagramDesigner/Resources/ToolboxItem.xaml"/>
+                <ResourceDictionary Source="Resources/DiagramDesigner/Resources/Toolbox.xaml"/>
+                <ResourceDictionary Source="Resources/DiagramDesigner/Resources/Connection.xaml"/>
+                <!--<ResourceDictionary Source="Resources/DiagramDesigner/Resources/Stencils/FlowChartStencils.xaml"/>
+                <ResourceDictionary Source="Resources/DiagramDesigner/Resources/Stencils/ShapeStencils.xaml"/>-->
+                <ResourceDictionary Source="Config/My/myStart.xaml"/>
+                <ResourceDictionary Source="Css/MainCss.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

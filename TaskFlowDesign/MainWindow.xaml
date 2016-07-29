@@ -1,0 +1,93 @@
+﻿<mc:MetroWindow x:Class="TaskFlowDesign.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:DiagramDesigner;assembly=DiagramDesigner"
+        xmlns:c="clr-namespace:DiagramDesigner.Controls;assembly=DiagramDesigner"
+        xmlns:mc="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:TaskFlowDesign"
+        Title="任务流程设计工具"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen"
+        NonActiveGlowBrush="#CDFF0000"
+        Icon="icon.ico"
+        Height="800"
+        Width="1000" Closing="MetroWindow_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--Menu-->
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Menu Grid.Row="0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Stretch">
+                <MenuItem Header="脚本生成"
+                      Command="{Binding ScriptGenerateCommand}"
+                          ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}"
+                          x:Name="mScriptGenerate" Click="mScriptGenerate_Click">
+                </MenuItem>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="265"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="265"/>
+            </Grid.ColumnDefinitions>
+            <!-- Toolbox -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid Name="ToolBox">
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="MySearch"
+                         mc:TextBoxHelper.UseFloatingWatermark="True"
+                         mc:TextBoxHelper.Watermark="工具栏搜索...">
+                        <TextBox.Style>
+                            <Style BasedOn="{StaticResource SearchMetroTextBox}" TargetType="{x:Type TextBox}"/>
+                        </TextBox.Style>
+                    </TextBox>
+                </Grid>
+            </Grid>
+            <GridSplitter Focusable="False" Background="White" Width="5" VerticalAlignment="Stretch" HorizontalAlignment="Right"/>
+            <!--FlowDesign-->
+            <Grid Grid.Column="1">
+                <GroupBox Header="流程图" Grid.Column="1" Margin="3,0,5,0">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                        <!--<mc:MetroTabControl Name="MyTab" TabItemClosingEvent="MyTab_TabItemClosingEvent">
+                            <mc:MetroTabItem Header="1" CloseButtonEnabled="True" CloseTabCommand="{Binding SingleCloseTabCommand}"
+                                               CloseTabCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"
+                                               mc:ControlsHelper.HeaderFontSize="20" >-->
+                        <s:DesignerCanvas Height="10000" Focusable="true" x:Name="MyDesigner"
+                            Background="{StaticResource WindowBackgroundBrush}"
+                            Margin="10" FocusVisualStyle="{x:Null}"
+                            ContextMenu="{StaticResource DesignerCanvasContextMenu}">
+                        </s:DesignerCanvas>
+                        <!--</mc:MetroTabItem>-->
+                        <!--</mc:MetroTabControl>-->
+                    </ScrollViewer>
+                </GroupBox>
+            </Grid>
+            <GridSplitter Grid.Column="1" Focusable="False" Background="White" Width="5" VerticalAlignment="Stretch" HorizontalAlignment="Right"/>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <GroupBox Header="属性" Margin="3,0,0,0">
+                    <StackPanel x:Name="ItemProperties">
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Header="实时预览" Margin="3,0,0,0">
+                    <TextBox Cursor="Arrow"  IsReadOnly="True" BorderThickness="0" Name="MyPreview"></TextBox>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</mc:MetroWindow>
