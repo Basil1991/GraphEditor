@@ -1,0 +1,9 @@
+###############
+#    folder   #
+###############
+/packages/
+/bin/
+/Config/
+/obj/
+/Properties/
+/.vs/
