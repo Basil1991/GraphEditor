@@ -8,8 +8,7 @@
         <Property name="方法参数"  field="FunParam" value=""></Property>
       </Propertys>
     </control>
-    <control key="End" name="流程结束" ImageSource="\Resource\end.ico"  ScriptPath="LuaEnd.txt">
-    </control>
+    <control type="checkEnd" key="ifEnd" name="判断结束" ImageSource="\Resource\Shap\tuoyuan.png"  ScriptPath="ifEnd.txt"></control>
   </ControlType>
   <!--判断列表-->
   <ControlType name="判断列表">
@@ -32,15 +31,14 @@
     </control>
   </ControlType>
   <!--玩家取值列表-->
-  <ControlType name="演示">
-    <control type="checkEnd" key="ifEnd" name="判断结束" ImageSource="\Resource\Shap\tuoyuan.png"  ScriptPath="ifEnd.txt"></control>
-    <control key="DialogText" name="对话文本" ImageSource="\Resource\Shap\tuoyuan.png" ScriptPath="DialogText.txt">
+  <ControlType name="行为">
+    <control key="DialogText" name="对话文本" ImageSource="\Resource\Shap\juxing.png" ScriptPath="DialogText.txt">
       <Propertys>
         <Property name="说话内容" field="text" value=""></Property>
       </Propertys>
     </control>
 
-    <control key="addSomething" name="获得物品" ImageSource="\Resource\Shap\tuoyuan.png" ScriptPath="AddSomething.txt">
+    <control key="addSomething" name="获得物品" ImageSource="\Resource\Shap\juxing.png" ScriptPath="AddSomething.txt">
       <Propertys>
         <Property name="物品ID" field="id" value=""></Property>
       </Propertys>

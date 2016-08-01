@@ -41,7 +41,6 @@ D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resou
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\end.ico
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\duobian.png
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\star.png
-D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\矩形.png
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\lingxin.png
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\tuoyuan.png
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\Demo.png
@@ -141,3 +140,4 @@ D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\ZF\Sc
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\ZF\ScriptTemplate\DialogText.txt
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\ZF\ScriptTemplate\checkEmptyBag.txt
 D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\ZF\ScriptTemplate\addSomething.txt
+D:\Work\Code\TaskFlowDesign\TaskFlowDesign\TaskFlowDesign\bin\Debug\Config\Resource\Shap\juxing.png

@@ -528,7 +528,7 @@
     <Content Include="Config\Resource\Shap\star.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Config\Resource\Shap\矩形.png">
+    <Content Include="Config\Resource\Shap\juxing.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Config\ZF\ToolBoxControlConfig.xml">

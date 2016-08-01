@@ -107,7 +107,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/zf/scripttemplate/testscript.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/resource/shap/duobian.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/resource/shap/star.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/resource/shap/%e7%9f%a9%e5%bd%a2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/resource/shap/juxing.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/zf/toolboxcontrolconfig.xml")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/resource/begin.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/resource/end.ico")]
