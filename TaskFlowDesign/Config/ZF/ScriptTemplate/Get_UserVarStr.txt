@@ -1,1 +1,0 @@
-Get_UserVarStr(<%nInx%>,<%nUserId%>)

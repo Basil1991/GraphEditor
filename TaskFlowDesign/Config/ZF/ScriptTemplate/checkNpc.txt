@@ -1,1 +1,0 @@
-﻿if Get_NpcId(0)=<%nNPCID%> then

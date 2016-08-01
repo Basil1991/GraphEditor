@@ -1,1 +1,0 @@
-﻿if not User_CheckLeftSpace(<%count%>) 

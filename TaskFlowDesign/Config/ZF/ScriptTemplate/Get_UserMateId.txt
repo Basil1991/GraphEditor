@@ -1,1 +1,0 @@
-Get_UserMateId(<%nUserId%>)

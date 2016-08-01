@@ -2,8 +2,11 @@
 #    folder   #
 ###############
 packages/*
-bin/*
+DiagramDesigner/bin/*
+DiagramDesigner/obj/*
 Config/*
-obj/*
+TaskFlowDesign/obj/*
+TaskFlowDesign/bin/*
 Properties/*
 .vs/*
+TaskFlowDesign/Config/*

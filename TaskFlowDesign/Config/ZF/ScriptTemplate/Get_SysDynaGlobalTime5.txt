@@ -1,1 +1,0 @@
-Get_SysDynaGlobalTime5(<%nSysDyGlobId%>)
