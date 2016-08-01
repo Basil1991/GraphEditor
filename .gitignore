@@ -1,9 +1,9 @@
 ###############
 #    folder   #
 ###############
-/packages/
-/bin/
-/Config/
-/obj/
-/Properties/
-/.vs/
+packages/*
+bin/*
+Config/*
+obj/*
+Properties/*
+.vs/*
