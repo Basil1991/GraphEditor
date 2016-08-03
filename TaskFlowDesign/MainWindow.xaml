@@ -58,20 +58,34 @@
             <!--FlowDesign-->
             <Grid Grid.Column="1">
                 <GroupBox Header="流程图" Grid.Column="1" Margin="3,0,5,0">
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
-                      VerticalScrollBarVisibility="Auto">
-                        <!--<mc:MetroTabControl Name="MyTab" TabItemClosingEvent="MyTab_TabItemClosingEvent">
-                            <mc:MetroTabItem Header="1" CloseButtonEnabled="True" CloseTabCommand="{Binding SingleCloseTabCommand}"
+                    <mc:MetroTabControl Name="MyTab" mc:TabControlHelper.IsUnderlined="True">
+                        <mc:MetroTabItem Header="设计1" CloseButtonEnabled="True" CloseTabCommand="{Binding SingleCloseTabCommand}"
                                                CloseTabCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"
-                                               mc:ControlsHelper.HeaderFontSize="20" >-->
-                        <s:DesignerCanvas Height="10000" Focusable="true" x:Name="MyDesigner"
+                                               mc:ControlsHelper.HeaderFontSize="15">
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                                <s:DesignerCanvas Height="10000" Focusable="true"
                             Background="{StaticResource WindowBackgroundBrush}"
                             Margin="10" FocusVisualStyle="{x:Null}"
                             ContextMenu="{StaticResource DesignerCanvasContextMenu}">
-                        </s:DesignerCanvas>
-                        <!--</mc:MetroTabItem>-->
-                        <!--</mc:MetroTabControl>-->
-                    </ScrollViewer>
+                                </s:DesignerCanvas>
+                            </ScrollViewer>
+                        </mc:MetroTabItem>
+
+                        <mc:MetroTabItem Header="设计2" CloseButtonEnabled="True" CloseTabCommand="{Binding SingleCloseTabCommand}"
+                                               CloseTabCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"
+                                               mc:ControlsHelper.HeaderFontSize="15">
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                                <s:DesignerCanvas Height="10000" Focusable="true"
+                            Background="{StaticResource WindowBackgroundBrush}"
+                            Margin="10" FocusVisualStyle="{x:Null}"
+                            ContextMenu="{StaticResource DesignerCanvasContextMenu}">
+                                </s:DesignerCanvas>
+                            </ScrollViewer>
+                        </mc:MetroTabItem>
+
+                    </mc:MetroTabControl>
                 </GroupBox>
             </Grid>
             <GridSplitter Grid.Column="1" Focusable="False" Background="White" Width="5" VerticalAlignment="Stretch" HorizontalAlignment="Right"/>

@@ -217,6 +217,15 @@
     <Resource Include="Resources\DiagramDesigner\Resources\Images\Ungroup.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Resource\Shap\check.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Resource\Shap\ifEnd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\ZF\ScriptTemplate\AddAndCheck.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Config\ZF\ScriptTemplate\DialogText.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -34,7 +34,7 @@ namespace TaskFlowDesign {
             InitializeComponent();
             checkToolBox();
             m_SyncContext = SynchronizationContext.Current;
-            TaskPreview();
+            //TaskPreview();
             TaskToolBarSearch();
         }
 
@@ -74,7 +74,11 @@ namespace TaskFlowDesign {
         private void getPreviewResult(object obj) {
             try {
                 ScriptGenerateUtil sg = new ScriptGenerateUtil();
-                var children = this.MyDesigner.Children;
+                var scrollViewer = (ScrollViewer)(this.MyTab.SelectedContent);
+                if (scrollViewer == null)
+                    return;
+                var designer = (DesignerCanvas)scrollViewer.Content;
+                var children = designer.Children;
                 //No node
                 if (children == null || children.Count == 0) {
                     return;

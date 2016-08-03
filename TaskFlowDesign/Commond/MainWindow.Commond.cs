@@ -43,7 +43,11 @@ namespace TaskFlowDesign {
             try {
 #endif
             ScriptGenerateUtil sg = new ScriptGenerateUtil();
-            var children = this.MyDesigner.Children;
+            var scrollViewer = (ScrollViewer)(this.MyTab.SelectedContent);
+            if (scrollViewer == null)
+                return;
+            var designer = (DesignerCanvas)scrollViewer.Content;
+            var children = designer.Children;
             //No node
             if (children == null || children.Count == 0) {
                 ((MetroWindow)Application.Current.MainWindow).ShowMessageAsync("脚本生成提示", "没有任何节点");

@@ -10,6 +10,7 @@ namespace TaskFlowDesign.Model {
             this.Items = new List<ToolBarItem>();
         }
         public string Header { get; set; }
+        public bool IsExpander { get; set; }
         public List<ToolBarItem> Items { get; set; }
     }
 

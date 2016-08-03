@@ -67,6 +67,7 @@ namespace DiagramDesigner {
 
         #region New Command
         private void New_Executed(object sender, ExecutedRoutedEventArgs e) {
+            
             //this.Children.Clear();
             //this.SelectionService.ClearSelection();
         }

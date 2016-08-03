@@ -23,6 +23,8 @@ namespace TaskFlowDesign.Utils {
             foreach (var ct in controlTypes) {
                 ToolBarModel tooBar = new ToolBarModel();
                 tooBar.Header = ct.Attributes.Where(a => a.Name == "name").Value;
+                var isExpanderAttr = ct.Attributes.Where(a => a.Name == "isExpander");
+                tooBar.IsExpander = isExpanderAttr == null ? false : bool.Parse(isExpanderAttr.Value);
                 foreach (XmlNode c in ct.ChildNodes) {
                     tooBar.Items.Add(getToolBarItem(c));
                 }
@@ -48,8 +50,8 @@ namespace TaskFlowDesign.Utils {
             if (typeAttr != null) {
                 item.Type = typeAttr.Value;
             }
-            if (c.ChildNodes.Has(a => a.Name == "Propertys")) {
-                var propsNode = c.ChildNodes.Where(a => a.Name == "Propertys").FirstOrDefault();
+            if (c.ChildNodes.Has(a => a.Name == "Properties")) {
+                var propsNode = c.ChildNodes.Where(a => a.Name == "Properties").FirstOrDefault();
                 item.Properties = new List<FlowDesignItemPropertyModel>();
                 foreach (XmlNode prop in propsNode.ChildNodes) {
                     FlowDesignItemPropertyModel model = new FlowDesignItemPropertyModel();
@@ -79,7 +81,7 @@ namespace TaskFlowDesign.Utils {
             return content;
         }
         private string getContentByModel(ToolBarModel model, string configPath) {
-            string begin = string.Format("<Expander  Header = \"{0}\"  IsExpanded = \"False\" >  <s:Toolbox> <ItemsControl.Items>", model.Header);
+            string begin = string.Format("<Expander  Header = \"{0}\"  IsExpanded = \"{1}\" >  <s:Toolbox> <ItemsControl.Items>", model.Header, model.IsExpander);
             string content = "";
             model.Items.ForEach(l => {
                 content += getContentByItem(l, configPath);

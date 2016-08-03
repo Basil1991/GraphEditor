@@ -27,7 +27,7 @@ namespace TaskFlowDesign.Utils {
         public string GetFinalResultByStartNode(DesignerItem source, UIElementCollection es) {
             return GetNodeResult("", source, es) + "\r\n" + ld.EndStr();
         }
-        private string GetNodeResult(string previousContent, DesignerItem source, UIElementCollection es, DesignerItem untiltem = null) {
+        private string GetNodeResult(string previousContent, DesignerItem source, UIElementCollection es, DesignerItem untiltem = null, bool isMulti = false) {
             string content = "";
             var nextNodes = findNextNodes(source, es);
 
@@ -37,8 +37,11 @@ namespace TaskFlowDesign.Utils {
             if (nextNodes != null && nextNodes.Count == 1) {
                 var singleSink = nextNodes.FirstOrDefault();
                 if (singleSink != null) {
-                    //知道source=untilItem的时候这次递归终止
+                    //直到source=untilItem的时候这次递归终止
                     if (untiltem == singleSink) {
+                        return content;
+                    }
+                    if (isMulti && checkNodeResultByTag(singleSink, "checkEnd")) {
                         return content;
                     }
                     content = content + "\r\n" + GetNodeResult(content, singleSink, es, untiltem);
@@ -47,17 +50,16 @@ namespace TaskFlowDesign.Utils {
                     content = ld.Decorate(previousContent, content);
                 }
             }
+            //
             else if (nextNodes != null &&
                 nextNodes.Count > 1) {
                 var Sinks = nextNodes;
                 DesignerItem itemEnd = new DesignerItem();
                 content = content + "\r\n" + getMultiItemsScript(content, Sinks, es, ref itemEnd);
-                content = content + "\r\n" + GetNodeResult(content, itemEnd, es);
+                content = content + "\r\n" + GetNodeResult(content, itemEnd, es, untiltem = null, true);
             }
+            //
             return content;
-        }
-        private string GetNodesResult(string previousContent, List<DesignerItem> sources, UIElementCollection es, int type) {
-            return "";
         }
         private bool checkNodeResult(DesignerItem item, string name) {
             var objs = item.GetChildObjects();
@@ -142,14 +144,24 @@ namespace TaskFlowDesign.Utils {
         private string getMultiItemsScript(string previousContent, List<DesignerItem> items, UIElementCollection es, ref DesignerItem endItem) {
             List<DesignerItem> ifItems = null;
             List<DesignerItem> elseItems = null;
-            List<DesignerItem> itemsGroupOne = getBranchItems(items[0], es);
+            List<DesignerItem> itemsGroupOne = new List<DesignerItem>();
+            itemsGroupOne.Add(items[0]);
+            var lastItem = getEndItem(items[0], es);
+            if (lastItem != null) {
+                itemsGroupOne.Add(lastItem);
+            }
             if (ifTimes == 0) {
                 ifItems = itemsGroupOne;
             }
             else {
                 elseItems = itemsGroupOne;
             }
-            List<DesignerItem> itemsGroupTwo = getBranchItems(items[1], es);
+            List<DesignerItem> itemsGroupTwo = new List<DesignerItem>();
+            itemsGroupTwo.Add(items[1]);
+            lastItem = getEndItem(items[1], es);
+            if (lastItem != null) {
+                itemsGroupTwo.Add(lastItem);
+            }
             if (ifItems == null) {
                 ifItems = itemsGroupTwo;
             }
@@ -164,9 +176,7 @@ namespace TaskFlowDesign.Utils {
             return ifScripts + "\r\n" + elseScripts;
         }
         int ifTimes = 1;
-        private List<DesignerItem> getBranchItems(DesignerItem item, UIElementCollection es) {
-            List<DesignerItem> list = new List<DesignerItem>();
-            list.Add(item);
+        private DesignerItem getEndItem(DesignerItem item, UIElementCollection es) {
             var nodes = findNextNodes(item, es);
             if (nodes != null && nodes.Count == 1) {
                 var node = nodes.FirstOrDefault();
@@ -177,11 +187,10 @@ namespace TaskFlowDesign.Utils {
                     ifTimes--;
                 }
                 if (ifTimes != 0) {
-                    list.AddRange(getBranchItems(node, es));
+                    return getEndItem(node, es);
                 }
                 else {
-                    list.Add(node);
-                    return list;
+                    return node;
                 }
             }
             else if (nodes != null && nodes.Count > 1) {
@@ -192,17 +201,20 @@ namespace TaskFlowDesign.Utils {
                     else if (checkNodeResultByTag(node, "checkEnd")) {
                         ifTimes--;
                     }
-                    list.AddRange(getBranchItems(node, es));
+                    //mark
+                    return getEndItem(node, es);
                 }
             }
-            return list;
+            return null;
         }
         private string getIfItemsScript(string previousContent, List<DesignerItem> items, UIElementCollection es) {
-            return GetNodeResult(previousContent, items[0], es, items[items.Count - 1]);
+            string ifItemsScript = GetNodeResult(previousContent, items[0], es, items[items.Count - 1]);
+            return ifItemsScript;
         }
         private string getElseItemsScript(string previousContent, List<DesignerItem> items, UIElementCollection es) {
             string elseStr = ld.Decorate(previousContent, ld.ElseStr());
-            return elseStr + "\r\n" + GetNodeResult(elseStr, items[0], es);
+            string elseItemsScript = elseStr + "\r\n" + GetNodeResult(elseStr, items[0], es);
+            return elseItemsScript;
         }
     }
 }
