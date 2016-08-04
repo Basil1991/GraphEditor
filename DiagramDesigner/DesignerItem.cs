@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using DiagramDesigner.Controls;
+using DiagramDesigner.Utils;
 
 namespace DiagramDesigner {
     //These attributes identify the types of the named parts that are used for templating
@@ -152,7 +153,7 @@ namespace DiagramDesigner {
             }
         }
         private void ItemPropertiesShow(Panel p) {
-            object propsPanel = this.FindName(PropertiesControlHelp.GetName());
+            object propsPanel = this.FindNameByUtil(PropertiesControlHelp.GetName());
             StackPanel sp = ((StackPanel)propsPanel);
             sp.Children.Clear();
 
@@ -188,11 +189,11 @@ namespace DiagramDesigner {
             }
         }
         private void PropertieskeyChanged(object sender, TextChangedEventArgs e) {
-            object propsPanel = this.FindName("ItemProperties");
+            object propsPanel = this.FindNameByUtil("ItemProperties");
             StackPanel sp = ((StackPanel)propsPanel);
             if (sp.Children.Count > 0) {
                 var grid = (Panel)sp.Children[0];
-                var hiddenLabel = (Label)this.FindName(grid.Name.Replace("PropGrid_", "HiddenLabel_"));
+                var hiddenLabel = (Label)this.FindNameByUtil(grid.Name.Replace("PropGrid_", "HiddenLabel_"));
                 string content = "";
                 for (int i = 0; i < grid.Children.Count; ++i) {
                     Panel panel = (Panel)grid.Children[i];

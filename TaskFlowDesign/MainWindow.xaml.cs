@@ -32,10 +32,15 @@ namespace TaskFlowDesign {
         SynchronizationContext m_SyncContext = null;
         public MainWindow() {
             InitializeComponent();
-            checkToolBox();
             m_SyncContext = SynchronizationContext.Current;
-            //TaskPreview();
-            TaskToolBarSearch();
+            //工具栏
+            checkToolBox();
+            //初始化页面任务
+            TaskRun();
+            //初始化命令绑定
+            CommondBinding();
+            //初始化一个TabItem
+            addTagItem();
         }
 
         #region First Load Tool Box
@@ -62,6 +67,11 @@ namespace TaskFlowDesign {
         }
         #endregion
 
+        #region Task
+        private void TaskRun() {
+            TaskPreview();
+            TaskToolBarSearch();
+        }
         #region Task Preview
         private void TaskPreview() {
             Task.Run(() => {
@@ -99,7 +109,6 @@ namespace TaskFlowDesign {
             }
         }
         #endregion
-
         #region Task ToolBarSearch
         private void TaskToolBarSearch() {
             Task.Run(() => {
@@ -146,6 +155,7 @@ namespace TaskFlowDesign {
             this.ToolBox.Children.Clear();
             this.ToolBox.Children.Add(obj);
         }
+        #endregion
         #endregion
     }
 }

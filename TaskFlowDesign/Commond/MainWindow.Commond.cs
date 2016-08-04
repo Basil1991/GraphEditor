@@ -1,6 +1,8 @@
 ﻿using DiagramDesigner;
+using DiagramDesigner.Utils;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using Microsoft.Win32;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,8 +12,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Markup;
 using System.Xml;
+using System.Xml.Linq;
 using TaskFlowDesign.Model;
 using TaskFlowDesign.Utils;
 
@@ -70,39 +74,46 @@ namespace TaskFlowDesign {
 #endif
         }
         #endregion
+        public void CommondBinding() {
+            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New_Executed));
+        }
+        private void New_Executed(object sender, ExecutedRoutedEventArgs e) {
+            addTagItem();
+        }
+        private void addTagItem() {
+            var tabControl = (TabControl)this.FindNameByUtil("MyTab");
+            var tabItems = tabControl.Items;
+            int maxTag = 0;
+            if (tabItems.Count != 0) {
+                foreach (TabItem item in tabItems) {
+                    var itemNum = Convert.ToInt32(item.Tag);
+                    maxTag = itemNum > maxTag ? itemNum : maxTag;
+                }
+            }
+            string header = "设计" + ++maxTag;
+            string itemStr = "<mc:MetroTabItem" +
+            " xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"" +
+            " xmlns:s=\"clr-namespace:DiagramDesigner;assembly=DiagramDesigner\"" +
+            " xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"" +
+            " xmlns:mc=\"http://metro.mahapps.com/winfx/xaml/controls\"" +
+            " Header=\"" + header + "\" Tag=\"" + maxTag + "\" CloseButtonEnabled=\"True\" CloseTabCommand=\"{ Binding SingleCloseTabCommand}\"" +
+                               " CloseTabCommandParameter = \"{Binding RelativeSource={RelativeSource Self}, Path=Header}\"" +
+                               " mc:ControlsHelper.HeaderFontSize = \"15\" >" +
+                             " <ScrollViewer HorizontalScrollBarVisibility = \"Auto\" " +
+                                " VerticalScrollBarVisibility = \"Auto\" > " +
+                                " <s:DesignerCanvas Height = \"10000\" Focusable = \"true\" " +
+                            " Background = \"{StaticResource WindowBackgroundBrush}\"" +
+                            " Margin = \"10\" FocusVisualStyle = \"{x:Null}\"" +
+                            " ContextMenu = \"{StaticResource DesignerCanvasContextMenu}\" >" +
+                                " </s:DesignerCanvas>" +
+                            " </ScrollViewer>" +
+                         "</mc:MetroTabItem> ";
+            byte[] byteArray = Encoding.UTF8.GetBytes(itemStr);
+            MemoryStream stream = new MemoryStream(byteArray);
+            XmlTextReader xmlreader = new XmlTextReader(stream);
+            MetroTabItem tabItem = XamlReader.Load(xmlreader) as MetroTabItem;
+            tabControl.Items.Add(tabItem);
+            tabControl.SelectedItem = tabItem;
+        }
     }
-    #region ToolBar Search 修改为后台线程中Check，避免每一次变动都要记录，改为1S查看一次是否变动
-    //private void ToolBarSearch(object sender, TextChangedEventArgs e) {
-    //    string result;
-    //    XMLUtil xu = new XMLUtil();
-    //    if (ToolBarKeeper.List == null) {
-    //        ToolBarKeeper.List = xu.GetToolBars(Setting.ZFToolBoxControlFile);
-    //    }
-    //    var list = ToolBarKeeper.List;
-    //    ConcurrentBag<ToolBarModel> cb = new ConcurrentBag<ToolBarModel>();
-    //    string text = ((TextBox)sender).Text.ToUpper();
-    //    if (string.IsNullOrEmpty(text)) {
-    //        result = xu.ConvertToXAML(list, Setting.ConfigDirectory);
-    //    }
-    //    else {
-    //        Parallel.ForEach(list, (l) => {
-    //            var items = l.Items.Where(a => a.Name.ToUpper().Contains(text)).ToList();
-    //            if (items.Count > 0) {
-    //                cb.Add(new ToolBarModel() {
-    //                    Header = l.Header,
-    //                    Items = items
-    //                });
-    //            }
-    //        });
-    //        result = xu.ConvertToXAML(cb, Setting.ConfigDirectory);
-    //    }
-    //    byte[] byteArray = Encoding.UTF8.GetBytes(result);
-    //    MemoryStream stream = new MemoryStream(byteArray);
-    //    XmlTextReader xmlreader = new XmlTextReader(stream);
-    //    UIElement obj = XamlReader.Load(xmlreader) as UIElement;
-    //    this.ToolBox.Children.Clear();
-    //    this.ToolBox.Children.Add(obj);
-    //}
-    #endregion
-    //}
 }

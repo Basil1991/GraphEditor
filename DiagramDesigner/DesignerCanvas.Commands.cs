@@ -14,6 +14,8 @@ using System.Xml.Linq;
 using Microsoft.Win32;
 using DiagramDesigner.Model;
 using System.Text.RegularExpressions;
+using System.Text;
+using DiagramDesigner.Utils;
 
 namespace DiagramDesigner {
     public partial class DesignerCanvas {
@@ -34,7 +36,6 @@ namespace DiagramDesigner {
         public static RoutedCommand SelectAll = new RoutedCommand();
 
         public DesignerCanvas() {
-            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Open, Open_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Print, Print_Executed));
@@ -64,14 +65,6 @@ namespace DiagramDesigner {
             this.AllowDrop = true;
             Clipboard.Clear();
         }
-
-        #region New Command
-        private void New_Executed(object sender, ExecutedRoutedEventArgs e) {
-            
-            //this.Children.Clear();
-            //this.SelectionService.ClearSelection();
-        }
-        #endregion
 
         #region Open Command
 
@@ -910,7 +903,7 @@ namespace DiagramDesigner {
             return (root1.ID == root2.ID);
         }
         private void ClearItemProperties() {
-            object o = this.FindName(PropertiesControlHelp.GetName());
+            object o = this.FindNameByUtil(PropertiesControlHelp.GetName());
             StackPanel sp = ((StackPanel)o);
             sp.Children.Clear();
         }
