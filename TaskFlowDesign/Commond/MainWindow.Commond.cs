@@ -40,9 +40,19 @@ namespace TaskFlowDesign {
             }
         }
         #endregion
-
-        #region Script Generate
-        private void mScriptGenerate_Click(object sender, RoutedEventArgs e) {
+        public void CommondBinding() {
+            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, new_Executed));
+            ScriptGenerateCommand.InputGestures.Add(new KeyGesture(Key.F5));
+            this.CommandBindings.Add(new CommandBinding(ScriptGenerateCommand, create_Executed));
+            this.mCreate.Command = ScriptGenerateCommand;
+            // this.CommandBindings.Add(new CommandBinding(SingleCloseTabCommand, tabClose_Excuted));
+        }
+        private RoutedCommand ScriptGenerateCommand = new RoutedCommand();
+        //private RoutedCommand SingleCloseTabCommand = new RoutedCommand();
+        private void new_Executed(object sender, ExecutedRoutedEventArgs e) {
+            addTagItem();
+        }
+        private void create_Executed(object sender, ExecutedRoutedEventArgs e) {
 #if REALEASE
             try {
 #endif
@@ -73,12 +83,7 @@ namespace TaskFlowDesign {
             }
 #endif
         }
-        #endregion
-        public void CommondBinding() {
-            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New_Executed));
-        }
-        private void New_Executed(object sender, ExecutedRoutedEventArgs e) {
-            addTagItem();
+        private void tabClose_Excuted(object sender, ExecutedRoutedEventArgs e) {
         }
         private void addTagItem() {
             var tabControl = (TabControl)this.FindNameByUtil("MyTab");
@@ -96,8 +101,7 @@ namespace TaskFlowDesign {
             " xmlns:s=\"clr-namespace:DiagramDesigner;assembly=DiagramDesigner\"" +
             " xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"" +
             " xmlns:mc=\"http://metro.mahapps.com/winfx/xaml/controls\"" +
-            " Header=\"" + header + "\" Tag=\"" + maxTag + "\" CloseButtonEnabled=\"True\" CloseTabCommand=\"{ Binding SingleCloseTabCommand}\"" +
-                               " CloseTabCommandParameter = \"{Binding RelativeSource={RelativeSource Self}, Path=Header}\"" +
+            " Header=\"" + header + "\" Tag=\"" + maxTag + "\" CloseButtonEnabled=\"True\" " +
                                " mc:ControlsHelper.HeaderFontSize = \"15\" >" +
                              " <ScrollViewer HorizontalScrollBarVisibility = \"Auto\" " +
                                 " VerticalScrollBarVisibility = \"Auto\" > " +
@@ -112,6 +116,7 @@ namespace TaskFlowDesign {
             MemoryStream stream = new MemoryStream(byteArray);
             XmlTextReader xmlreader = new XmlTextReader(stream);
             MetroTabItem tabItem = XamlReader.Load(xmlreader) as MetroTabItem;
+            //tabItem.CloseTabCommand = SingleCloseTabCommand;
             tabControl.Items.Add(tabItem);
             tabControl.SelectedItem = tabItem;
         }

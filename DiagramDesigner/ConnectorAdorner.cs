@@ -52,7 +52,7 @@ namespace DiagramDesigner {
 
                 Canvas.SetZIndex(newConnection, designerCanvas.Children.Count);
                 this.designerCanvas.Children.Add(newConnection);
-                UndoStack.Stack.Push(new StackObject(new List<UIElement> { newConnection }, StackType.Add));
+                this.designerCanvas.UndoStack.Stack.Push(new StackObject(new List<UIElement> { newConnection }, StackType.Add));
             }
             if (HitDesignerItem != null) {
                 this.HitDesignerItem.IsDragConnectionOver = false;

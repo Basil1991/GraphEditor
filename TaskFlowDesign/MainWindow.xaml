@@ -31,11 +31,8 @@
                     <!--<MenuItem Header="打开"   Command="{x:Static ApplicationCommands.Open}"
                         CommandTarget="{Binding ElementName=MyWindow}"/>-->
                 </MenuItem>
-
-                <MenuItem Header="脚本生成"
-                      Command="{Binding ScriptGenerateCommand}"
-                          ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}"
-                          x:Name="mScriptGenerate1" Click="mScriptGenerate_Click">
+                <MenuItem Header="生成" ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}">
+                    <MenuItem Header="脚本生成" Name="mCreate"/>
                 </MenuItem>
             </Menu>
         </Grid>

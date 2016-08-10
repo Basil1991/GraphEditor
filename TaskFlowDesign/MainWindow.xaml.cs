@@ -25,9 +25,6 @@ using DiagramDesigner;
 using System.Collections.Concurrent;
 
 namespace TaskFlowDesign {
-    /// <summary>
-    /// MainWindow.xaml 的交互逻辑
-    /// </summary>
     public partial class MainWindow : MetroWindow {
         SynchronizationContext m_SyncContext = null;
         public MainWindow() {
@@ -35,12 +32,12 @@ namespace TaskFlowDesign {
             m_SyncContext = SynchronizationContext.Current;
             //工具栏
             checkToolBox();
-            //初始化页面任务
-            TaskRun();
             //初始化命令绑定
             CommondBinding();
             //初始化一个TabItem
             addTagItem();
+            //初始化页面任务
+            TaskRun();
         }
 
         #region First Load Tool Box

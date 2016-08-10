@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using TaskFlowDesign.Model;
 
 namespace TaskFlowDesign.Utils {
@@ -170,6 +171,8 @@ namespace TaskFlowDesign.Utils {
             }
             ifTimes = 1;
             string ifScripts = getIfItemsScript(previousContent, ifItems, es);
+            //Else设置连线颜色
+            setElseConnectionColor(elseItems[0], es);
             string elseScripts = getElseItemsScript(ifScripts, elseItems, es);
 
             endItem = ifItems[ifItems.Count - 1];
@@ -202,7 +205,10 @@ namespace TaskFlowDesign.Utils {
                         ifTimes--;
                     }
                     //mark
-                    return getEndItem(node, es);
+                    var endNode = getEndItem(node, es);
+                    if (endNode != null) {
+                        return endNode;
+                    }
                 }
             }
             return null;
@@ -215,6 +221,20 @@ namespace TaskFlowDesign.Utils {
             string elseStr = ld.Decorate(previousContent, ld.ElseStr());
             string elseItemsScript = elseStr + "\r\n" + GetNodeResult(elseStr, items[0], es);
             return elseItemsScript;
+        }
+        private void setElseConnectionColor(DesignerItem sink, UIElementCollection es) {
+            foreach (var e in es) {
+                if (e is Connection) {
+                    Connection connector = (Connection)e;
+                    if (connector.Sink.ParentDesignerItem == sink) {
+                        var path = connector.FindChild<System.Windows.Shapes.Path>("PART_ConnectionPath");
+                        if (path != null) {
+                            path.Stroke = (Brush)System.ComponentModel.TypeDescriptor.GetConverter(
+    typeof(Brush)).ConvertFromInvariantString("Red");
+                        }
+                    }
+                }
+            }
         }
     }
 }

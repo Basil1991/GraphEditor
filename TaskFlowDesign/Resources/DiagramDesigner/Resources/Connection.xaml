@@ -91,7 +91,7 @@
                               StrokeEndLineCap="Round"
                               StrokeLineJoin="Round"
                               StrokeDashArray="{Binding StrokeDashArray}"
-                              SnapsToDevicePixels="True"                              
+                              SnapsToDevicePixels="True"              
                               Data="{Binding PathGeometry}">
                         </Path>
                         <Grid Style="{StaticResource ArrowGridStyle}"

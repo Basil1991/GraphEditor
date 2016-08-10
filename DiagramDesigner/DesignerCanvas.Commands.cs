@@ -35,6 +35,8 @@ namespace DiagramDesigner {
         public static RoutedCommand DistributeVertical = new RoutedCommand();
         public static RoutedCommand SelectAll = new RoutedCommand();
 
+        public UndoStack UndoStack { get; set; }
+        public RedoStack RedoStack { get; set; }
         public DesignerCanvas() {
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Open, Open_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save_Executed));
@@ -61,7 +63,8 @@ namespace DiagramDesigner {
             this.CommandBindings.Add(new CommandBinding(DesignerCanvas.DistributeVertical, DistributeVertical_Executed, Distribute_Enabled));
             this.CommandBindings.Add(new CommandBinding(DesignerCanvas.SelectAll, SelectAll_Executed));
             SelectAll.InputGestures.Add(new KeyGesture(Key.A, ModifierKeys.Control));
-
+            UndoStack = new UndoStack();
+            RedoStack = new RedoStack();
             this.AllowDrop = true;
             Clipboard.Clear();
         }

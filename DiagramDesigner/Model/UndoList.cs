@@ -42,9 +42,15 @@ namespace DiagramDesigner.Model {
         }
     }
     public class UndoStack {
-        public static Stack<StackObject> Stack = new Stack<StackObject>();
+        public UndoStack() {
+            Stack = new Stack<StackObject>();
+        }
+        public Stack<StackObject> Stack { get; set; }
     }
     public class RedoStack {
-        public static Stack<StackObject> Stack = new Stack<StackObject>();
+        public RedoStack() {
+            Stack = new Stack<StackObject>();
+        }
+        public Stack<StackObject> Stack { get; set; }
     }
 }
