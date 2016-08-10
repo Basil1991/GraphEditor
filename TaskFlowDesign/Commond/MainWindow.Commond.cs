@@ -42,12 +42,24 @@ namespace TaskFlowDesign {
         #endregion
         public void CommondBinding() {
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, new_Executed));
+
             ScriptGenerateCommand.InputGestures.Add(new KeyGesture(Key.F5));
             this.CommandBindings.Add(new CommandBinding(ScriptGenerateCommand, create_Executed));
             this.mCreate.Command = ScriptGenerateCommand;
+
+            ToolBoxCollapseCommand.InputGestures.Add(new KeyGesture(Key.F10));
+            this.CommandBindings.Add(new CommandBinding(ToolBoxCollapseCommand, toolboxCollapse_Excuted));
+            this.mCollapse.Command = ToolBoxCollapseCommand;
+
+            ToolBoxExpanseCommand.InputGestures.Add(new KeyGesture(Key.F11));
+            this.CommandBindings.Add(new CommandBinding(ToolBoxExpanseCommand, toolboxExpanse_Excuted));
+            this.mExpanse.Command = ToolBoxExpanseCommand;
             // this.CommandBindings.Add(new CommandBinding(SingleCloseTabCommand, tabClose_Excuted));
         }
-        private RoutedCommand ScriptGenerateCommand = new RoutedCommand();
+        public static RoutedCommand ScriptGenerateCommand = new RoutedCommand();
+        public static RoutedCommand ToolBoxCollapseCommand = new RoutedCommand();
+        public static RoutedCommand ToolBoxExpanseCommand = new RoutedCommand();
+
         //private RoutedCommand SingleCloseTabCommand = new RoutedCommand();
         private void new_Executed(object sender, ExecutedRoutedEventArgs e) {
             addTagItem();
@@ -84,6 +96,18 @@ namespace TaskFlowDesign {
 #endif
         }
         private void tabClose_Excuted(object sender, ExecutedRoutedEventArgs e) {
+        }
+        private void toolboxCollapse_Excuted(object sender, ExecutedRoutedEventArgs e) {
+            var children = this.ToolBox.FindChildren<Expander>();
+            foreach (var child in children) {
+                child.IsExpanded = false;
+            }
+        }
+        private void toolboxExpanse_Excuted(object sender, ExecutedRoutedEventArgs e) {
+            var children = this.ToolBox.FindChildren<Expander>();
+            foreach (var child in children) {
+                child.IsExpanded = true;
+            }
         }
         private void addTagItem() {
             var tabControl = (TabControl)this.FindNameByUtil("MyTab");
