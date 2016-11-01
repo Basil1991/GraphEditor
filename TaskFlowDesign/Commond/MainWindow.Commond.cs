@@ -80,7 +80,7 @@ namespace TaskFlowDesign {
                 return;
             }
             //No Start Node
-            var start = sg.FindGrid(children, "Start");
+            var start = sg.FindMainStart(children);
             if (start == null) {
                 ((MetroWindow)Application.Current.MainWindow).ShowMessageAsync("脚本生成提示", "找不到开始节点");
                 return;

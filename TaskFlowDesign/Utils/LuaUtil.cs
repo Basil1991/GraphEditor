@@ -75,6 +75,7 @@ namespace TaskFlowDesign.Utils {
             if (firstContentRowElseRegex) {
                 spaceCount -= indentCount;
             }
+
             while (spaceCount > 0) {
                 spaceStr += " ";
                 spaceCount -= 1;

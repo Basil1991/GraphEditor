@@ -23,7 +23,6 @@
             <Menu Grid.Row="0"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Stretch">
-
                 <MenuItem Header="文件"
                           ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}">
                     <MenuItem Header="新建"  Command="{x:Static ApplicationCommands.New}"
@@ -94,6 +93,9 @@
                     <StackPanel x:Name="ItemProperties">
                     </StackPanel>
                 </GroupBox>
+
+                <GridSplitter Height="5" Margin="4,0,0,0" Focusable="False" Background="White"  HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+
                 <GroupBox Grid.Row="1" Header="实时预览" Margin="3,0,0,0">
                     <TextBox Cursor="Arrow"  IsReadOnly="True" BorderThickness="0" Name="MyPreview"></TextBox>
                 </GroupBox>

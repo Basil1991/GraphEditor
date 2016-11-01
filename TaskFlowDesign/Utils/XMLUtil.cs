@@ -92,7 +92,8 @@ namespace TaskFlowDesign.Utils {
         private string getContentByItem(ToolBarItem item, string configPath) {
             string content = string.Format(" <Grid  x:Name=\"{0}\" Tag=\"{1}\" IsHitTestVisible=\"false\" >", item.Key, item.Type == null ? "" : item.Type) +
                 string.Format(" <Image Source=\"{0}\" MinWidth=\"0\" MaxWidth=\"100\"  />", configPath + item.ImageSource) +
-                string.Format(" <Label  HorizontalAlignment=\"Center\" Content=\"{0}\" HorizontalContentAlignment=\"Center\" VerticalContentAlignment=\"Center\"/>", item.Name);
+                string.Format(" <Label  HorizontalAlignment=\"Center\" HorizontalContentAlignment=\"Center\" Content=\"{0}\"  VerticalContentAlignment=\"Center\"/>", item.Name) +
+            "<TextBlock  Foreground=\"Red\" FontSize=\"10\" TextWrapping=\"Wrap\" HorizontalAlignment=\"Center\" Tag=\"Comment\" VerticalAlignment=\"Bottom\" />";
             if (item.Properties != null) {
                 content += string.Format(" <Label Tag=\"Properties\" Visibility=\"Collapsed\" Content=\"{0}\"></Label>", getPropsXaml(item.Properties));
             }
@@ -106,11 +107,11 @@ namespace TaskFlowDesign.Utils {
             bool firstTime = true;
             foreach (var p in props) {
                 if (firstTime) {
-                    content = content + p.Name + ":" + p.Value + ":" + p.Filed;
+                    content = content + p.Name + "@:" + p.Value + "@:" + p.Filed;
                     firstTime = false;
                 }
                 else
-                    content = content + "," + p.Name + ":" + p.Value + ":" + p.Filed;
+                    content = content + "@," + p.Name + "@:" + p.Value + "@:" + p.Filed;
             }
             return content;
         }

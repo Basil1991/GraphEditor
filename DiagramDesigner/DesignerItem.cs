@@ -169,19 +169,32 @@ namespace DiagramDesigner {
                         StackPanel grid = new StackPanel();
                         grid.Name = label.Name.Replace("HiddenLabel_", "PropGrid_");
                         var propsStr = label.Content.ToString();
-                        var propsArr = propsStr.Split(',');
+                        var propsArr = propsStr.Split(new string[] { "@," }, StringSplitOptions.None);
                         for (int i = 0; i < propsArr.Length; ++i) {
                             var prop = propsArr[i];
                             StackPanel propPanel = new StackPanel();
                             Label l = new Label();
-                            l.Content = prop.Split(':')[0];
-                            l.Tag = prop.Split(':')[2];
+                            l.Content = prop.Split(new string[] { "@:" }, StringSplitOptions.None)[0];
+                            l.Tag = prop.Split(new string[] { "@:" }, StringSplitOptions.None)[2];
                             TextBox t = new TextBox();
                             t.TextChanged += new TextChangedEventHandler(PropertieskeyChanged);
-                            t.Text = prop.Split(':')[1];
+                            t.Text = prop.Split(new string[] { "@:" }, StringSplitOptions.None)[1];
                             propPanel.Children.Add(l);
                             propPanel.Children.Add(t);
                             grid.Children.Add(propPanel);
+                            //备注
+                            if (i == propsArr.Length - 1) {
+                                if (prop.Split(new string[] { "@:" }, StringSplitOptions.None)[0] != "备注") {
+                                    StackPanel commentPropPanel = new StackPanel();
+                                    Label commnetLabel = new Label();
+                                    commnetLabel.Content = "备注";
+                                    TextBox commentText = new TextBox();
+                                    commentText.TextChanged += new TextChangedEventHandler(PropertieskeyChanged);
+                                    commentPropPanel.Children.Add(commnetLabel);
+                                    commentPropPanel.Children.Add(commentText);
+                                    grid.Children.Add(commentPropPanel);
+                                }
+                            }
                         }
                         sp.Children.Add(grid);
                     }
@@ -197,21 +210,51 @@ namespace DiagramDesigner {
                 string content = "";
                 for (int i = 0; i < grid.Children.Count; ++i) {
                     Panel panel = (Panel)grid.Children[i];
+                    bool isComment = false;
                     for (int ii = 0; ii < panel.Children.Count; ++ii) {
                         object control = panel.Children[ii];
                         if (control is Label) {
                             Label label = ((Label)control);
+                            if (label.Content.ToString() == "备注") {
+                                isComment = true;
+                            }
                             if (ii == 0) {
-                                content += label.Content.ToString() + ":" + "<%" + i + "%>" + ":" + label.Tag;
+                                content += label.Content.ToString() + "@:" + "<%" + i + "%>" + "@:" + label.Tag;
                             }
                             else {
-                                content += "," + label.Content.ToString() + ":" + "<%" + i + "%>" + ":" + label.Tag;
+                                content += "," + label.Content.ToString() + "@:" + "<%" + i + "%>" + "@:" + label.Tag;
                             }
                         }
                         else if (control is TextBox) {
                             content = content.Replace("<%" + i + "%>", ((TextBox)control).Text);
                             if (i != grid.Children.Count - 1) {
-                                content += ",";
+                                content += "@,";
+                            }
+                            //备注（这里有优化空间，只要记录修改的是comment才触发，目前没去做）
+                            if (isComment) {
+                                var chidrens = ((Grid)hiddenLabel.Parent).Children;
+                                bool isExistComment = false;
+                                foreach (var child in chidrens) {
+                                    if (child is TextBlock) {
+                                        TextBlock childLabel = (TextBlock)child;
+                                        if (childLabel.Tag != null && childLabel.Tag.ToString() == "Comment") {
+                                            isExistComment = true;
+                                            childLabel.Text = ((TextBox)control).Text;
+                                        }
+                                    }
+                                }
+                                //For old version
+                                if (isExistComment == false) {
+                                    var childLabel = new TextBlock();
+                                    childLabel.Tag = "Comment";
+                                    childLabel.VerticalAlignment = VerticalAlignment.Bottom;
+                                    childLabel.HorizontalAlignment = HorizontalAlignment.Center;
+                                    childLabel.Foreground = Brushes.Red;
+                                    childLabel.FontSize = 10;
+                                    childLabel.TextWrapping = TextWrapping.Wrap;
+                                    childLabel.Text = ((TextBox)control).Text;
+                                    ((Grid)hiddenLabel.Parent).Children.Add(childLabel);
+                                }
                             }
                         }
                     }

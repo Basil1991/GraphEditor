@@ -91,7 +91,7 @@ namespace TaskFlowDesign {
                     return;
                 }
                 //No Start Node
-                var start = sg.FindGrid(children, "Start");
+                var start = sg.FindMainStart(children);
                 if (start == null) {
                     return;
                 }

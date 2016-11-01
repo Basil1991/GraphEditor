@@ -14,50 +14,91 @@ using TaskFlowDesign.Model;
 namespace TaskFlowDesign.Utils {
     public class ScriptGenerateUtil {
         static LanguageDecorate ld = LanguageFactory.Create(LanguageType.Lua);
-        public UIElement FindGrid(UIElementCollection es, string name) {
+        public UIElement FindMainStart(UIElementCollection es) {
             foreach (var e in es) {
                 if (e is DesignerItem) {
                     DesignerItem item = (DesignerItem)e;
-                    if (checkNodeResult(item, name)) {
-                        return item;
+                    if (checkNodeResult(item, "Start")) {
+                        bool isFirstStart = true;
+                        foreach (var c in es) {
+                            if (c is Connection) {
+                                Connection connector = (Connection)c;
+                                if (connector.Sink.ParentDesignerItem == item) {
+                                    isFirstStart = false;
+                                }
+                            }
+                        }
+                        if (isFirstStart) {
+                            return item;
+                        }
                     }
                 }
             }
             return null;
         }
         public string GetFinalResultByStartNode(DesignerItem source, UIElementCollection es) {
-            return GetNodeResult("", source, es) + "\r\n" + ld.EndStr();
+            string funtionContent = "";
+            string result = GetNodeResult("", ref funtionContent, source, es) + "\r\n" + ld.EndStr();
+            return result + funtionContent;
         }
-        private string GetNodeResult(string previousContent, DesignerItem source, UIElementCollection es, DesignerItem untiltem = null, bool isMulti = false) {
+        private string GetNodeResult(string previousContent, ref string functionContent, DesignerItem source, UIElementCollection es, DesignerItem untiltem = null, bool isMulti = false) {
             string content = "";
-            var nextNodes = findNextNodes(source, es);
-
-            content += getScript(source);
-            content = ld.Decorate(previousContent, content);
-
-            if (nextNodes != null && nextNodes.Count == 1) {
-                var singleSink = nextNodes.FirstOrDefault();
-                if (singleSink != null) {
-                    //直到source=untilItem的时候这次递归终止
-                    if (untiltem == singleSink) {
-                        return content;
-                    }
-                    if (isMulti && checkNodeResultByTag(singleSink, "checkEnd")) {
-                        return content;
-                    }
-                    content = content + "\r\n" + GetNodeResult(content, singleSink, es, untiltem);
-                }
-                else {
-                    content = ld.Decorate(previousContent, content);
-                }
+            //如果包含多个方法
+            if (previousContent != "" && checkNodeResult(source, "Start")) {
+                functionContent += ("\r\n" + GetFinalResultByStartNode(source, es));
             }
-            //
-            else if (nextNodes != null &&
-                nextNodes.Count > 1) {
-                var Sinks = nextNodes;
-                DesignerItem itemEnd = new DesignerItem();
-                content = content + "\r\n" + getMultiItemsScript(content, Sinks, es, ref itemEnd);
-                content = content + "\r\n" + GetNodeResult(content, itemEnd, es, untiltem = null, true);
+            else {
+                var nextNodes = findNextNodes(source, es);
+                content += getScript(source);
+                content = ld.Decorate(previousContent, content);
+                if (nextNodes != null && nextNodes.Count == 1) {
+                    var singleSink = nextNodes.FirstOrDefault();
+                    if (singleSink != null) {
+                        //直到source=untilItem的时候这次递归终止
+                        if (untiltem == singleSink) {
+                            return content;
+                        }
+                        if (isMulti && checkNodeResultByTag(singleSink, "checkEnd")) {
+                            return content;
+                        }
+                        string singleResult = GetNodeResult(content, ref functionContent, singleSink, es, untiltem, isMulti);
+                        if (singleResult != "") {
+                            content = content + "\r\n" + singleResult;
+                        }
+                    }
+                    else {
+                        content = ld.Decorate(previousContent, content);
+                    }
+                }
+                //
+                else if (nextNodes != null &&
+                    nextNodes.Count == 2) {
+                    var Sinks = nextNodes;
+                    bool isCheck = true;
+                    //如果是分支语句
+                    foreach (var sink in Sinks) {
+                        if (checkNodeResult(sink, "Start")) {
+                            isCheck = false;
+                        }
+                    }
+                    //如果是判断语句
+                    if (isCheck == true) {
+                        DesignerItem itemEnd = new DesignerItem();
+                        content = content + "\r\n" + getMultiItemsScript(content, ref functionContent, Sinks, es, ref itemEnd);
+                        content = content + "\r\n" + GetNodeResult(content, ref functionContent, itemEnd, es, untiltem = null, isMulti);
+                    }
+                    //如果是分支语句
+                    else {
+                        foreach (var sink in Sinks) {
+                            if (checkNodeResult(sink, "Start")) {
+                                GetNodeResult(content, ref functionContent, sink, es);
+                            }
+                            else {
+                                content = content + "\r\n" + GetNodeResult(content, ref functionContent, sink, es);
+                            }
+                        }
+                    }
+                }
             }
             //
             return content;
@@ -128,10 +169,10 @@ namespace TaskFlowDesign.Utils {
                         }
                     }
                     else if (label.Tag != null && label.Tag.ToString() == "Properties") {
-                        var props = label.Content.ToString().Split(',');
+                        var props = label.Content.ToString().Split(new string[] { "@," }, StringSplitOptions.None);
 
                         foreach (var prop in props) {
-                            var arr = prop.Split(':');
+                            var arr = prop.Split(new string[] { "@:" }, StringSplitOptions.None);
                             dic.Add(arr[2], arr[1]);
                         }
                     }
@@ -142,14 +183,20 @@ namespace TaskFlowDesign.Utils {
             }
             return script;
         }
-        private string getMultiItemsScript(string previousContent, List<DesignerItem> items, UIElementCollection es, ref DesignerItem endItem) {
+        private string getMultiItemsScript(string previousContent, ref string functionContent, List<DesignerItem> items, UIElementCollection es, ref DesignerItem endItem) {
             List<DesignerItem> ifItems = null;
             List<DesignerItem> elseItems = null;
             List<DesignerItem> itemsGroupOne = new List<DesignerItem>();
             itemsGroupOne.Add(items[0]);
-            var lastItem = getEndItem(items[0], es);
-            if (lastItem != null) {
-                itemsGroupOne.Add(lastItem);
+            if (checkNodeResultByTag(items[0], "check")) {
+                ifTimes++;
+            }
+            if (checkNodeResultByTag(items[0], "checkEnd")) {
+                ifTimes--;
+            }
+            var oneLastItem = ifTimes != 0 ? getEndItem(items[0], es) : null;
+            if (oneLastItem != null) {
+                itemsGroupOne.Add(oneLastItem);
             }
             if (ifTimes == 0) {
                 ifItems = itemsGroupOne;
@@ -159,9 +206,15 @@ namespace TaskFlowDesign.Utils {
             }
             List<DesignerItem> itemsGroupTwo = new List<DesignerItem>();
             itemsGroupTwo.Add(items[1]);
-            lastItem = getEndItem(items[1], es);
-            if (lastItem != null) {
-                itemsGroupTwo.Add(lastItem);
+            if (checkNodeResultByTag(items[1], "check")) {
+                ifTimes++;
+            }
+            if (checkNodeResultByTag(items[1], "checkEnd")) {
+                ifTimes--;
+            }
+            var twoLastItem = ifTimes != 0 ? getEndItem(items[1], es) : null;
+            if (twoLastItem != null) {
+                itemsGroupTwo.Add(twoLastItem);
             }
             if (ifItems == null) {
                 ifItems = itemsGroupTwo;
@@ -170,13 +223,17 @@ namespace TaskFlowDesign.Utils {
                 elseItems = itemsGroupTwo;
             }
             ifTimes = 1;
-            string ifScripts = getIfItemsScript(previousContent, ifItems, es);
+            string ifScripts = "";
+            if (ifItems.Count > 1) {
+                ifScripts = getIfItemsScript(previousContent, ref functionContent, ifItems, es) + "\r\n";
+            }
             //Else设置连线颜色
             setElseConnectionColor(elseItems[0], es);
-            string elseScripts = getElseItemsScript(ifScripts, elseItems, es);
+            string elseScripts = getElseItemsScript(ifScripts == "" ? previousContent : ifScripts, ref functionContent, elseItems, es);
 
             endItem = ifItems[ifItems.Count - 1];
-            return ifScripts + "\r\n" + elseScripts;
+
+            return ifScripts + elseScripts;
         }
         int ifTimes = 1;
         private DesignerItem getEndItem(DesignerItem item, UIElementCollection es) {
@@ -213,13 +270,13 @@ namespace TaskFlowDesign.Utils {
             }
             return null;
         }
-        private string getIfItemsScript(string previousContent, List<DesignerItem> items, UIElementCollection es) {
-            string ifItemsScript = GetNodeResult(previousContent, items[0], es, items[items.Count - 1]);
+        private string getIfItemsScript(string previousContent, ref string functionContent, List<DesignerItem> items, UIElementCollection es) {
+            string ifItemsScript = GetNodeResult(previousContent, ref functionContent, items[0], es, items[items.Count - 1], true);
             return ifItemsScript;
         }
-        private string getElseItemsScript(string previousContent, List<DesignerItem> items, UIElementCollection es) {
+        private string getElseItemsScript(string previousContent, ref string functionContent, List<DesignerItem> items, UIElementCollection es) {
             string elseStr = ld.Decorate(previousContent, ld.ElseStr());
-            string elseItemsScript = elseStr + "\r\n" + GetNodeResult(elseStr, items[0], es);
+            string elseItemsScript = elseStr + "\r\n" + GetNodeResult(elseStr, ref functionContent, items[0], es, isMulti: true);
             return elseItemsScript;
         }
         private void setElseConnectionColor(DesignerItem sink, UIElementCollection es) {
@@ -230,7 +287,7 @@ namespace TaskFlowDesign.Utils {
                         var path = connector.FindChild<System.Windows.Shapes.Path>("PART_ConnectionPath");
                         if (path != null) {
                             path.Stroke = (Brush)System.ComponentModel.TypeDescriptor.GetConverter(
-    typeof(Brush)).ConvertFromInvariantString("Red");
+        typeof(Brush)).ConvertFromInvariantString("Red");
                         }
                     }
                 }
